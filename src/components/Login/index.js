@@ -21,7 +21,7 @@ function Login() {
   const [showSubmitError, setShowSubmitError] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
 
-  const navigate = useNavigate(); // Use useNavigate hook instead of history prop
+  const navigate = useNavigate(); 
 
   const showPassword = (event) => {
     setVisibility(event.target.checked);
@@ -41,7 +41,7 @@ function Login() {
       path: '/',
     });
 
-    navigate('/'); // Use navigate function to navigate to home page
+    navigate('/'); 
   };
 
   const onSubmitFailure = (errorMsg) => {

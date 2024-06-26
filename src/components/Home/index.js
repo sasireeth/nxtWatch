@@ -93,7 +93,22 @@ const Home = () => {
         return (
           <HomeContainer $bgColor={`${bgColor}`} $color={`${color}`}>
             {isLoading ? (
+              <>
+              <HeadDiv>
+                <SearchIp
+                  placeholder="Search Channel"
+                  type="search"
+                  value={searchIp}
+                  onChange={onChange}
+                  onKeyDown={onKey}
+                />
+                <ButtonEl onClick={onSearch}>
+                  <AiOutlineSearch size={20} />
+                </ButtonEl>
+              </HeadDiv>
+              
               <LoaderComp />
+              </>
             ) : (
               <>
                 {status ? (

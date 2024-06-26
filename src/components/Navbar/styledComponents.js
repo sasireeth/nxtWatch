@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const DivContainer = styled.div`
   width: 25%;
+  height:15%;
+  top:0;
 `
 
 export const ListContainer = styled.ul`

@@ -14,7 +14,10 @@ import VideoCard from './components/VideoCard';
 import NotFound from './components/NotFound';
 
 class App extends Component {
-  state = { activeTheme: 'light', savedVideos: [] };
+  state = {
+    activeTheme: 'light',
+    savedVideos: [],
+  };
 
   changeTheme = (activeTheme) => {
     this.setState({ activeTheme });
@@ -46,11 +49,20 @@ class App extends Component {
         }}
       >
         <div className="app-container">
-          <Header />
-          <div className={`${bgColor} main-frame-container`}>
-            <Navbar />
+          <Routes>
+              <Route
+                path="/login"
+                element={<Login onLogin={this.handleLogin} />}
+              />
+           </Routes>  
+           <Header />
+           
+           <div className={`${bgColor} main-frame-container`}> 
+           <Navbar />
+            
+          
             <Routes>
-              <Route path="/login" element={<Login />} />
+            
               <Route path="/" element={<Home />} />
               <Route path="trending" element={<Trending />} />
               <Route path="gaming" element={<Gaming />} />
